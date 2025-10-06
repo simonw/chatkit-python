@@ -1,0 +1,82 @@
+site_name: Chatkit Python SDK
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - content.code.select
+    - navigation.sections
+    - navigation.path
+    - navigation.expand
+    - content.code.annotate
+  palette:
+    primary: black
+  logo: assets/logo.svg
+  favicon: images/favicon-platform.svg
+
+repo_name: chatkit-python-internal
+repo_url: https://github.com/openai/chatkit-python-internal
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["."]
+          selection:
+            docstring_style: google
+          options:
+            signature_crossrefs: true
+            members_order: source
+            separate_signature: true
+            show_signature_annotations: true
+            heading_level: 3
+            inherited_members: false
+            filters:
+              - "!^_"
+  - gen-files:
+      scripts:
+        - docs/gen_ref_pages.py
+
+nav:
+  - Home: index.md
+  - Guides:
+      - Server Integration: server.md
+      - Actions: actions.md
+      - Widgets: widgets.md
+  - API Reference:
+      - Overview: api/chatkit/index.md
+      - Modules:
+          - actions: api/chatkit/actions.md
+          - agents: api/chatkit/agents.md
+          - errors: api/chatkit/errors.md
+          - server: api/chatkit/server.md
+          - store: api/chatkit/store.md
+          - types: api/chatkit/types.md
+          - widgets: api/chatkit/widgets.md
+  - Related projects:
+      - ChatKit JS Docs: https://openai.github.io/chatkit/
+      - Agents Python: https://openai.github.io/openai-agents-python/
+      - Agents JS: https://openai.github.io/openai-agents-js/
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
+
+watch:
+  - chatkit

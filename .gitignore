@@ -1,0 +1,40 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Type checking / lint caches
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# Test & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# DB
+chatkit*.db
+
+uploads/
+
+# MkDocs build output
+site/
+
+# Editors & OS
+.DS_Store
+.idea/
+.vscode/
+.python-version
+.cache/
+.ipynb_checkpoints/
