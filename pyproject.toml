@@ -1,6 +1,6 @@
 [project]
-name = "chatkit"
-version = "0.1.0"
+name = "openai-chatkit"
+version = "0.0.2"
 description = "A ChatKit backend SDK."
 readme = "README.md"
 requires-python = ">=3.10"
